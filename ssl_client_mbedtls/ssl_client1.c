@@ -61,10 +61,22 @@ int main( void )
 #include "mbedtls/certs.h"
 
 #include <string.h>
-
+/*
 #define SERVER_PORT "4433"
 #define SERVER_NAME "localhost"
-#define GET_REQUEST "GET / HTTP/1.0\r\n\r\n"
+*/
+
+//#define SERVER_PORT "443"
+//#define SERVER_NAME "www.eff.org"
+//#define GET_REQUEST "GET / HTTP/1.0\r\n\r\n"
+//#define GET_REQUEST "GET / HTTP/1.1\r\nHost: www.eff.org\r\n\r\n"
+
+#define SERVER_PORT "443"
+#define SERVER_NAME "testapi.incust.com"
+#define GET_REQUEST \
+"POST /external_data/systemgroup HTTP/1.1\r\nHost: testapi.incust.com\r\nAccept: */*\r\n" \
+"Content-Type: application/xml;charset=windows-1251\r\nContent-Length: 326\r\n\r\n" \
+"<?xml version=\"1.0\" encoding=\"windows-1251\"?><DAT FN=\"0123456789\" TN=\"0123456789\" ZN=\"АТ0123456789\" DI=\"12345679\"><TS>20180510130430</TS><P C=\"0760557812166\" NM=\"T.sonic 615\" SM=\"800\" TX=\"1\"/><P C=\"0760557812999\" NM=\"ВОДА МІНЕРАЛЬНА\" SM=\"100\" TX=\"2\"/><D TR=\"1\" TY=\"1\" PR=\"10.00\" SM=\"90\"/><M T=\"0\" NM=\"ГОТІВКА\" SM=\"810\"/></DAT>"
 
 #define DEBUG_LEVEL 1
 
