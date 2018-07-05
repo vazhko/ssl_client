@@ -148,10 +148,10 @@ int main( int argc, char *argv[] )
     /*
      * 2. Setup the listening TCP socket
      */
-    printf( "  . Bind on https://localhost:4433/ ..." );
+    printf( "  . Bind on https://localhost:50000/ ..." );
     fflush( stdout );
 
-    if( ( ret = net_bind( &listen_fd, NULL, 4433 ) ) != 0 )
+    if( ( ret = net_bind( &listen_fd, NULL, 50000 ) ) != 0 )
     {
         printf( " failed\n  ! net_bind returned %d\n\n", ret );
         goto exit;
@@ -240,7 +240,7 @@ reset:
         ShellExecuteEx( &sei );
     }
 #elif defined(_WIN32)
-    ShellExecute( NULL, "open", "https://localhost:4433/",
+    ShellExecute( NULL, "open", "https://localhost:50000/",
                   NULL, NULL, SW_SHOWNORMAL );
 #endif
 

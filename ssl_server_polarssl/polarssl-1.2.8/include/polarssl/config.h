@@ -479,7 +479,7 @@
  *
  * This module is used for testing (ssl_client/server).
  */
-//#define POLARSSL_CERTS_C
+#define POLARSSL_CERTS_C
 
 /**
  * \def POLARSSL_CIPHER_C
@@ -877,7 +877,7 @@
  *
  * This module is required for SSL/TLS server support.
  */
-//#define POLARSSL_SSL_SRV_C
+#define POLARSSL_SSL_SRV_C
 
 /**
  * \def POLARSSL_SSL_TLS_C
