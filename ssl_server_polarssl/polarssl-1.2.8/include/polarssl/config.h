@@ -140,8 +140,8 @@
  *
  * Uncomment this macro to store the AES tables in ROM.
  *
-#define POLARSSL_AES_ROM_TABLES
  */
+#define POLARSSL_AES_ROM_TABLES
 
 /**
  * \def POLARSSL_CIPHER_MODE_CFB
@@ -259,6 +259,7 @@
  *
 #define POLARSSL_RSA_NO_CRT
  */
+#define POLARSSL_RSA_NO_CRT
 
 /**
  * \def POLARSSL_SELF_TEST
@@ -467,7 +468,7 @@
  *      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA256
  *      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256
  */
-#define POLARSSL_CAMELLIA_C
+//#define POLARSSL_CAMELLIA_C
 
 /**
  * \def POLARSSL_CERTS_C

@@ -132,7 +132,7 @@
  */
 #if !defined(POLARSSL_CONFIG_OPTIONS)
 //#define SSL_MAX_CONTENT_LEN         16384   /**< Size of the input / output buffer */
-#define SSL_MAX_CONTENT_LEN         2048   /**< Size of the input / output buffer */
+#define SSL_MAX_CONTENT_LEN         3072   /**< Size of the input / output buffer */
 #endif /* !POLARSSL_CONFIG_OPTIONS */
 
 /*

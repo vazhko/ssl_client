@@ -54,7 +54,7 @@
     "<h2>PolarSSL Test Server</h2>\r\n" \
     "<p>Successful connection using: %s</p>\r\n"
 
-#define DEBUG_LEVEL 4
+#define DEBUG_LEVEL 100
 
 void my_debug( void *ctx, int level, const char *str )
 {
@@ -148,10 +148,10 @@ int main( int argc, char *argv[] )
     /*
      * 2. Setup the listening TCP socket
      */
-    printf( "  . Bind on https://localhost:50000/ ..." );
+    printf( "  . Bind on https://localhost:50001/ ..." );
     fflush( stdout );
 
-    if( ( ret = net_bind( &listen_fd, NULL, 50000 ) ) != 0 )
+    if( ( ret = net_bind( &listen_fd, NULL, 50001 ) ) != 0 )
     {
         printf( " failed\n  ! net_bind returned %d\n\n", ret );
         goto exit;

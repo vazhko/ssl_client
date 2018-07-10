@@ -140,8 +140,8 @@
  *
  * Uncomment this macro to store the AES tables in ROM.
  *
-#define POLARSSL_AES_ROM_TABLES
  */
+#define POLARSSL_AES_ROM_TABLES
 
 /**
  * \def POLARSSL_CIPHER_MODE_CFB
