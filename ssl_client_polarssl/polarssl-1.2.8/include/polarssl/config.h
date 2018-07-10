@@ -237,8 +237,8 @@
  * standards like the /dev/urandom or Windows CryptoAPI.
  *
  * Uncomment this macro to disable the built-in platform entropy functions.
-#define POLARSSL_NO_PLATFORM_ENTROPY
  */
+//#define POLARSSL_NO_PLATFORM_ENTROPY
 
 /**
  * \def POLARSSL_PKCS1_V21
@@ -446,7 +446,7 @@
  *
  * Module:  library/blowfish.c
  */
-#define POLARSSL_BLOWFISH_C
+//#define POLARSSL_BLOWFISH_C
 
 /**
  * \def POLARSSL_CAMELLIA_C
@@ -467,7 +467,7 @@
  *      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA256
  *      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256
  */
-#define POLARSSL_CAMELLIA_C
+//#define POLARSSL_CAMELLIA_C
 
 /**
  * \def POLARSSL_CERTS_C
@@ -563,7 +563,7 @@
  *      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
  *      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
  */
-#define POLARSSL_DHM_C
+//#define POLARSSL_DHM_C
 
 /**
  * \def POLARSSL_ENTROPY_C
@@ -605,7 +605,7 @@
  *      TLS_RSA_WITH_AES_128_GCM_SHA256
  *      TLS_RSA_WITH_AES_256_GCM_SHA384
  */
-#define POLARSSL_GCM_C
+//#define POLARSSL_GCM_C
 
 /**
  * \def POLARSSL_HAVEGE_C
@@ -627,7 +627,7 @@
  * Requires: POLARSSL_TIMING_C
  *
  * Uncomment to enable the HAVEGE random generator.
-#define POLARSSL_HAVEGE_C
+//#define POLARSSL_HAVEGE_C
  */
 
 /**
@@ -849,7 +849,7 @@
  *
  * Requires: POLARSSL_SSL_CACHE_C
  */
-#define POLARSSL_SSL_CACHE_C
+//#define POLARSSL_SSL_CACHE_C
 
 /**
  * \def POLARSSL_SSL_CLI_C
@@ -915,7 +915,7 @@
  *
  * This module provides run-time version information.
  */
-#define POLARSSL_VERSION_C
+//#define POLARSSL_VERSION_C
 
 /**
  * \def POLARSSL_X509_PARSE_C

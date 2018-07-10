@@ -40,20 +40,20 @@
 #include "polarssl/certs.h"
 
 #if 0
-#define SERVER_PORT 50001//4433
+#define SERVER_PORT 50001
 #define SERVER_NAME "localhost"
 #define GET_REQUEST "GET / HTTP/1.0\r\n\r\n"
 #define DEBUG_LEVEL 100
-#endif
+#else
+#define XML_DOC "<?xml version=\"1.0\" encoding=\"windows-1251\"?><DAT FN=\"0123456789\" TN=\"0123456789\" ZN=\"ÀÒ0123456799\" DI=\"12345689\"><REGISTER LOGIN=\"380111111111\" PASSWORD=\"1111\"/><TS>20180710130430</TS><P C=\"0760557812166\" NM=\"T.sonic 615\" SM=\"800\" TX=\"1\"/><P C=\"0760557812999\" NM=\"ÂÎÄÀ Ì²ÍÅÐÀËÜÍÀ\" SM=\"100\" TX=\"2\"/><D TR=\"1\" TY=\"1\" PR=\"10.00\" SM=\"90\"/><M T=\"0\" NM=\"ÃÎÒ²ÂÊÀ\" SM=\"810\"/></DAT>"
 
-#if 1
 #define SERVER_PORT 443
 #define SERVER_NAME "testapi.incust.com"
 #define GET_REQUEST \
 "POST /external_data/systemgroup HTTP/1.1\r\nHost: testapi.incust.com\r\nAccept: */*\r\n" \
-"Content-Type: application/xml;charset=windows-1251\r\nContent-Length: 326\r\n\r\n" \
-"<?xml version=\"1.0\" encoding=\"windows-1251\"?><DAT FN=\"0123456789\" TN=\"0123456789\" ZN=\"ÀÒ0123456799\" DI=\"12345689\"><TS>20180710130430</TS><P C=\"0760557812166\" NM=\"T.sonic 615\" SM=\"800\" TX=\"1\"/><P C=\"0760557812999\" NM=\"ÂÎÄÀ Ì²ÍÅÐÀËÜÍÀ\" SM=\"100\" TX=\"2\"/><D TR=\"1\" TY=\"1\" PR=\"10.00\" SM=\"90\"/><M T=\"0\" NM=\"ÃÎÒ²ÂÊÀ\" SM=\"810\"/></DAT>"
-#define DEBUG_LEVEL 2
+"Content-Type: application/xml;charset=windows-1251\r\nContent-Length: 374\r\n\r\n" XML_DOC
+
+#define DEBUG_LEVEL 100
 #endif
 
 
@@ -87,6 +87,9 @@ int main( int argc, char *argv[] )
     int ret, len, server_fd;
     unsigned char buf[1024];
     const char *pers = "ssl_client1";
+
+    len = strlen(XML_DOC);
+    printf("len=%d", len);
 
     entropy_context entropy;
     ctr_drbg_context ctr_drbg;
